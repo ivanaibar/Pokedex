@@ -1,0 +1,29 @@
+/*
+ Localizable.strings
+ Pokedex
+ 
+ Created by Ivan Aibar Romero on 4/11/17.
+ Copyright © 2017 Ivan Aibar Romero. All rights reserved.
+ */
+
+// Common
+"Common.AlertHeader" = "Warning";
+"Common.Error" = "Something wrong happened. Please, try again.";
+"Common.Retry" = "Retry";
+
+// BackPack
+"BackPack.Search" = "Search";
+"BackPack.Title" = "BackPack";
+"BackPack.Empty" = "You don't have any pokemon. Catch'em all by tapping on Search button ;)";
+
+// PokemonAlert
+"PokemonAlert.NoCatch" = "You already have this pokemon";
+"PokemonAlert.CatchIt" = "Catch It!";
+"PokemonAlert.LeaveIt" = "Leave It";
+"PokemonAlert.Weight" = "Weight";
+"PokemonAlert.Height" = "Height";
+
+// PokemonDetail
+"PokemonDetail.Base" = "Base experience";
+"PokemonDetail.DateCatched" = "Date catched";
+"PokemonDetail.Types" = "Types";
