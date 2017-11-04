@@ -35,10 +35,4 @@ final class Api {
             completion(response)
         }
     }
-    
-    func getPokemonImage(url: String, completion: @escaping(DataResponse<Image>) -> ()) {
-        manager.request(url, method: .get, parameters: nil, headers: nil).validate().responseImage { response in
-            completion(response)
-        }
-    }
 }

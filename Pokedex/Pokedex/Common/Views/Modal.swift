@@ -26,7 +26,7 @@ extension Modal where Self:UIView {
             UIView.animate(withDuration: 0.6, animations: {
                 self.backgroundView.alpha = 0.66
             })
-            UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 15, options: UIViewAnimationOptions(rawValue: 0), animations: {
+            UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 15, options: UIViewAnimationOptions(rawValue: 0), animations: {
                 self.dialogView.center  = self.center
             }, completion: { (completed) in
                 
@@ -44,7 +44,7 @@ extension Modal where Self:UIView {
             }, completion: { (completed) in
                 
             })
-            UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 15, options: UIViewAnimationOptions(rawValue: 0), animations: {
+            UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 15, options: UIViewAnimationOptions(rawValue: 0), animations: {
                 self.dialogView.center = CGPoint(x: self.center.x, y: self.frame.height + self.dialogView.frame.height/2)
             }, completion: { (completed) in
                 self.removeFromSuperview()
