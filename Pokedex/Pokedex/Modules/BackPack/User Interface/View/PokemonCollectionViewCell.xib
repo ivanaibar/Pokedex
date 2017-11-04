@@ -20,10 +20,13 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="avn-u3-xJW">
-                        <rect key="frame" x="25" y="10" width="50" height="57"/>
+                        <rect key="frame" x="20" y="10" width="60" height="50"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fnO-jG-AED">
-                        <rect key="frame" x="8" y="75" width="84" height="17"/>
+                        <rect key="frame" x="8" y="68" width="84" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="ZHR-pH-6ux"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -33,12 +36,12 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="fnO-jG-AED" secondAttribute="trailing" constant="8" id="29V-OF-ua0"/>
                 <constraint firstItem="fnO-jG-AED" firstAttribute="top" secondItem="avn-u3-xJW" secondAttribute="bottom" constant="8" id="K37-Vg-5Ig"/>
-                <constraint firstAttribute="trailing" secondItem="avn-u3-xJW" secondAttribute="trailing" constant="25" id="LEx-tH-X6Y"/>
+                <constraint firstAttribute="trailing" secondItem="avn-u3-xJW" secondAttribute="trailing" constant="20" id="KKp-6a-J03"/>
                 <constraint firstItem="fnO-jG-AED" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="W8p-Tc-g7q"/>
                 <constraint firstItem="avn-u3-xJW" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="YE8-al-I8E"/>
+                <constraint firstItem="avn-u3-xJW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="hTE-3r-0f7"/>
                 <constraint firstAttribute="bottom" secondItem="fnO-jG-AED" secondAttribute="bottom" constant="8" id="kcm-DS-4OI"/>
                 <constraint firstItem="avn-u3-xJW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="ykp-ya-XZx"/>
-                <constraint firstItem="avn-u3-xJW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="25" id="ywL-L9-7y1"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
