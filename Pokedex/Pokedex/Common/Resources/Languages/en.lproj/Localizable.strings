@@ -1,15 +1,16 @@
-/* 
-  Localizable.strings
-  Pokedex
-
-  Created by Ivan Aibar Romero on 4/11/17.
-  Copyright © 2017 Ivan Aibar Romero. All rights reserved.
-*/
+/*
+ Localizable.strings
+ Pokedex
+ 
+ Created by Ivan Aibar Romero on 4/11/17.
+ Copyright © 2017 Ivan Aibar Romero. All rights reserved.
+ */
 
 // Common
 "Common.AlertHeader" = "Warning";
 "Common.Error" = "Something wrong happened. Please, try again.";
 "Common.Retry" = "Retry";
+"Common.NoConnectivity" = "Internet not available, check your internet connectivity and try again";
 
 // BackPack
 "BackPack.Search" = "Search";
@@ -27,3 +28,4 @@
 "PokemonDetail.Base" = "Base experience";
 "PokemonDetail.DateCatched" = "Date catched";
 "PokemonDetail.Types" = "Types";
+

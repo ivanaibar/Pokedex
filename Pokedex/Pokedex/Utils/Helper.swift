@@ -9,8 +9,10 @@
 import Foundation
 import UIKit
 import AlamofireImage
+import Alamofire
 
 class Helper {
+    
     class func isHttpOk(code: Int) -> Bool {
         return code >= 200 && code < 300
     }
@@ -21,5 +23,9 @@ class Helper {
                 imageView.image = value
             }
         })
+    }
+    
+    class var isConnectedToInternet:Bool {
+        return Alamofire.NetworkReachabilityManager()!.isReachable
     }
 }

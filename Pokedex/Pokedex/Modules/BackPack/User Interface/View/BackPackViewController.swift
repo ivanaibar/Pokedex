@@ -132,7 +132,8 @@ class BackPackViewController: UIViewController, BackPackViewInterface, UICollect
             let alert = PokemonAlert(pokemon: pokemon!, canCatchIt: canCatchIt)
             alert.show(animated: true)
         }else {
-            let alert = UIAlertController(title: "Common.AlertHeader".localized(), message: "Common.Error".localized(), preferredStyle: UIAlertControllerStyle.alert)
+            let alertMessage = code != 503 ? "Common.Error".localized() : "Common.NoConnectivity".localized()
+            let alert = UIAlertController(title: "Common.AlertHeader".localized(), message: alertMessage, preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             alert.addAction(UIAlertAction(title: "Common.Retry".localized(), style: .default, handler: { action in
                 self.searchPokemon()

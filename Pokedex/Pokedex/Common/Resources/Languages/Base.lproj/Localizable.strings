@@ -10,6 +10,7 @@
 "Common.AlertHeader" = "Warning";
 "Common.Error" = "Something wrong happened. Please, try again.";
 "Common.Retry" = "Retry";
+"Common.NoConnectivity" = "Internet not available, check your internet connectivity and try again";
 
 // BackPack
 "BackPack.Search" = "Search";

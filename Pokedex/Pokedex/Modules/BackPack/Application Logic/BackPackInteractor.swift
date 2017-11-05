@@ -32,20 +32,24 @@ class BackPackInteractor : BackPackInteractorInput {
     // MARK: BackPackInteractorInput
     
     func searchPokemon() {
-        Api.sharedInstance.searchPokemon(completion: { (response: DataResponse<Pokemon>) in
-            switch response.result {
-            case .success(let pokemon):
-                // Check if already exists in local DB
-                let pokemonExists = DataManager.sharedInstance.pokemonExists(pokemon: pokemon)
-                self.output.pokemonSearched(pokemon: pokemon, code: (response.response?.statusCode)!, canCatchIt: !pokemonExists)
-            case .failure(_):
-                if let response = response.response {
-                    self.output.pokemonSearched(pokemon: nil, code: response.statusCode, canCatchIt: false)
-                }else {
-                    self.output.pokemonSearched(pokemon: nil, code: 500, canCatchIt: false)
+        if Helper.isConnectedToInternet {
+            Api.sharedInstance.searchPokemon(completion: { (response: DataResponse<Pokemon>) in
+                switch response.result {
+                case .success(let pokemon):
+                    // Check if already exists in local DB
+                    let pokemonExists = DataManager.sharedInstance.pokemonExists(pokemon: pokemon)
+                    self.output.pokemonSearched(pokemon: pokemon, code: (response.response?.statusCode)!, canCatchIt: !pokemonExists)
+                case .failure(_):
+                    if let response = response.response {
+                        self.output.pokemonSearched(pokemon: nil, code: response.statusCode, canCatchIt: false)
+                    }else {
+                        self.output.pokemonSearched(pokemon: nil, code: 500, canCatchIt: false)
+                    }
                 }
-            }
-        })
+            })
+        }else {
+            self.output.pokemonSearched(pokemon: nil, code: 503, canCatchIt: false)
+        }
     }
     
     func getBackPackPokemons() {
